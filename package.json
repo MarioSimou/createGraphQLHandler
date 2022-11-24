@@ -1,0 +1,68 @@
+{
+  "name": "solid-start-create-api-graphql-handler",
+  "version": "0.0.1",
+  "private": false,
+  "description": "A simple parser of an incoming event in solid-start to support a GraphQL endpoint",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/MarioSimou/solid-start-create-api-graphql-handler/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarioSimou/solid-start-create-api-graphql-handler.git"
+  },
+  "contributors": [
+    {
+      "name": "Marios Simou",
+      "url": "https://www.mariossimou.dev",
+      "author": true
+    }
+  ],
+  "scripts": {
+    "build": "pnpm clean && tsc -P ./src/api/tsconfig.json",
+    "build:check": "pnpm clean && pnpm build --noEmit",
+    "build:tarball": "pnpm build && pnpm pack --pack-destination .",
+    "unpack:tarball": "tar -zxvf solid-start-create-api-graphql-handler-0.0.1.tgz",
+    "prettier": "prettier --loglevel warn './src/**'",
+    "prettier:check": "pnpm prettier --check",
+    "prettier:format": "pnpm prettier --write",
+    "lint": "eslint './src/**'",
+    "lint:check": "pnpm lint",
+    "lint:format": "pnpm lint --fix",
+    "clean": "rm -rf dist package solid-start-create-api-graphql-handler-0.0.1.tgz 2>/dev/null",
+    "deploy": "pnpm publish",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest watch",
+    "test:unit:ui": "vitest watch --ui"
+  },
+  "keywords": [
+    "solid-start",
+    "solid-js",
+    "graphql",
+    "@apollo/server"
+  ],
+  "author": "Marios Simou",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/debug": "^4.1.7",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "@vitest/ui": "^0.25.3",
+    "eslint": "^8.28.0",
+    "graphql-tag": "^2.12.6",
+    "prettier": "^2.8.0",
+    "typescript": "^4.9.3",
+    "undici": "^5.13.0",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3"
+  },
+  "peerDependencies": {
+    "@apollo/server": "4.x",
+    "solid-start": "0.x"
+  }
+}
