@@ -30,7 +30,7 @@ await server.start()
 type Data = Record<string, unknown>
 
 const handler: Handler<Data> = (res) => {
-    if(!res.success){
+    if(res.success === false){
         const {errors} = res
         // process error response from the server
     }

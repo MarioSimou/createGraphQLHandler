@@ -1,6 +1,6 @@
 {
   "name": "solid-start-create-api-graphql-handler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
   "license": "ISC",
   "description": "A simple parser of an incoming event in solid-start to support a GraphQL endpoint",
