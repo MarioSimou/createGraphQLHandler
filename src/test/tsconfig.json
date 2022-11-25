@@ -3,6 +3,6 @@
   "compilerOptions": {
     "types": ["vitest/globals"]
   },
-  "include": ["../api","./**/*.spec.ts", "../../global.d.ts"],
+  "include": ["../api", "./**/*.spec.ts", "../../global.d.ts"],
   "exclude": ["../../node_modules"]
 }
